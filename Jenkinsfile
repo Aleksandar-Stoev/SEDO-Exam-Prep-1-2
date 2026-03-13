@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage("Restore dependencies"){
             when {
-                anyОf {
+                anyOf {
                     branch 'main'
                     branch 'master'
                 }
@@ -14,7 +14,7 @@ pipeline{
         }
         stage("Build the app"){
             when {
-                anyОf {
+                anyOf {
                     branch 'main'
                     branch 'master'
                 }
@@ -25,7 +25,7 @@ pipeline{
         }
         stage("Run the tests"){
             when {
-                anyОf {
+                anyOf {
                     branch 'main'
                     branch 'master'
                 }
